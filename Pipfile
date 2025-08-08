@@ -10,7 +10,6 @@ django-autoslug = "==1.9.9"
 django-countries = "==7.5.1"
 django-phonenumber-field = "==7.3.0"
 phonenumbers = "==8.13.32"
-drf-yasg = "==1.21.7"
 pillow = "==10.2.0"
 argon2-cffi = "==23.1.0"
 djoser = "==2.2.2"
@@ -26,6 +25,7 @@ psycopg2-binary = "==2.9.9"
 watchfiles = "==0.21.0"
 black = "==24.3.0"
 django = "==4.2.11"
+drf-yasg = "==1.21.7"
 
 [dev-packages]
 
