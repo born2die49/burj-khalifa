@@ -17,6 +17,8 @@ SITE_NAME = getenv("SITE_NAME")
 
 SECRET_KEY = getenv("DJANGO_SECRET_KEY", "iI2bNYDvSkU2Ptfrv1TzrAFv1vS-PUXghUQMyJ5xj4QqmGjBOiU")
 
+CSRF_TRUSTED_ORIGINS = ["http://localhost:8080"]
+
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0"]
 
