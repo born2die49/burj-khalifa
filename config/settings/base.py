@@ -197,7 +197,7 @@ COOKIE_NAME = "access"
 COOKIE_SAMESITE = "Lax"
 COOKIE_PATH = "/"
 COOKIE_HTTPONLY = True
-COOKIE_SECURE = getenv("COOKIE_SECURE", "Ture") == "True"
+COOKIE_SECURE = getenv("COOKIE_SECURE", "True") == "True"
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -213,7 +213,7 @@ REST_FRAMEWORK = {
       "django_filters.rest_framework.DjangoFilterBackend",
    ],
    "PAGE_SIZE": 10,
-   "Default_THROTTLE_CLASSES": (
+   "DEFAULT_THROTTLE_CLASSES": (
        "rest_framework.throttling.AnonRateThrottle",
        "rest_framework.throttling.UserRateThrottle"
    ),
@@ -244,7 +244,7 @@ DJOSER = {
     "PASSWORD_RESET_CONFIRM_URL": "password-reset/{uid}/{token}",
     "SOCIAL_AUTH_ALLOWED_REDIRECT_URIS": getenv("REDIRECT_URIS", "").split(","),
     "SERIALIZERS": {
-        "user_create": "core_apps.user.serializesrs.CreateUserSerializer",
+        "user_create": "core_apps.user.serializers.CreateUserSerializer",
     },
 }
 
