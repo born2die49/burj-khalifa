@@ -26,7 +26,8 @@ urlpatterns = [
     path("api/v1/auth/", include("core_apps.user.urls")),
     path("api/v1/profiles/", include("core_apps.profiles.urls")),
     path("api/v1/apartments/", include("core_apps.apartment.urls")),
-    path("api/v1/issues/", include("core_apps.issue.urls"))
+    path("api/v1/issues/", include("core_apps.issue.urls")),
+    path("api/v1/reports/", include("core_apps.report.urls"))
 ]
 
 admin.site.site_header = "Burg Khalifa Admin"

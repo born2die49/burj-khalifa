@@ -47,7 +47,7 @@ def send_resolution_email(issue: Issue) -> None:
     from_email = DEFAULT_FROM_EMAIL
     recipient_list = [issue.reported_by.email]
     context = {"issue": issue, "site_name": SITE_NAME}
-    html_email = render_to_string("emails/issue_confirmation.html", context)
+    html_email = render_to_string("emails/issue_resolved_notification.html", context)
     text_email = strip_tags(html_email)
     from_email = DEFAULT_FROM_EMAIL
     email = EmailMultiAlternatives(subject, text_email, from_email, recipient_list)
