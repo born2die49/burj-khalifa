@@ -28,7 +28,8 @@ urlpatterns = [
     path("api/v1/apartments/", include("core_apps.apartment.urls")),
     path("api/v1/issues/", include("core_apps.issue.urls")),
     path("api/v1/reports/", include("core_apps.report.urls")),
-    path("api/v1/ratings/", include("core_apps.rating.urls"))
+    path("api/v1/ratings/", include("core_apps.rating.urls")),
+    path("api/v1/posts/", include("core_apps.post.urls"))
 ]
 
 admin.site.site_header = "Burg Khalifa Admin"
