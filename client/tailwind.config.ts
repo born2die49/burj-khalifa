@@ -20,6 +20,11 @@ const config: Config = {
   		},
   		colors: {},
 			borderradius: {},
+			fontFamily: {
+				inter: ["var(--font-openSans)"],
+				openSans: ["var(--font-openSans)"],
+				robotoSlab: ["var(--font-robotoSlab)"]
+			}
   	}
   },
   plugins: [require("tailwindcss-animate")],
