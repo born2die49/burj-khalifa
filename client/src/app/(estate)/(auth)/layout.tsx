@@ -7,7 +7,7 @@ interface LayoutProps {
 
 export default function layout({children}: LayoutProps) {
   return (
-    <main className='bg-googleBlue relative'>
+    <main className='bg-baby_veryBlack relative'>
       <Navbar/>
       <div className='flex'>
         {/* placeholder leftnavbar component*/}
