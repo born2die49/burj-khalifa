@@ -30,7 +30,7 @@ const config: Config = {
 				richBlack: "#0D1317",
 				veryBlack: "#000000",
 				babyPowder: "#FBFEF9",
-				pumpkin: "#F17105",
+				pumpkin: "#B0413E",
 				platinum: "#DDE1E4",
 				lightGrey: "#EEEEEE",
 				pear: "#C2E812",
