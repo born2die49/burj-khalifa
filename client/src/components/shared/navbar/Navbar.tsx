@@ -2,6 +2,7 @@ import { HomeModernIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import React from 'react'
 import ThemeSwitcher from './ThemeSwitcher'
+import MobileNavbar from './MobileNavbar'
 
 export default function Navbar() {
   return (
@@ -17,9 +18,7 @@ export default function Navbar() {
         {/* placeholder theme switcher component */}
         <ThemeSwitcher/>
         {/* placeholder mobile navigation */}
-        <div className='dark:text-pumpkin text-lg sm:text-xl'>
-          Mobile Navbar
-        </div>
+        <MobileNavbar/>
       </div>
     </nav>
   )
