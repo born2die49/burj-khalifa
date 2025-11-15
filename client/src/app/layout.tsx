@@ -5,7 +5,7 @@ import React from "react";
 import { openSans, robotoSlab } from "@/lib/fonts";
 import { ThemeProvider } from "@/components/theme-provider"; 
 import ReduxProvider from "@/lib/redux/provider";
-import Toast from "@/components/shared/navbar/Toast";
+import Toast from "@/components/shared/Toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
