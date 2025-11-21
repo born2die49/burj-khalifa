@@ -1,9 +1,10 @@
 "use client";
+import ProtectedRoute from '@/components/shared/ProtectedRoutes';
 import Spinner from '@/components/shared/Spinner';
 import { useGetAllUsersQuery } from '@/lib/redux/features/users/usersApiSlice';
 import React from 'react'
 
-export default function TenantsPage() {
+function TenantsPageContent() {
   // 1. Use the auto-generated hook
   const {data, isLoading} = useGetAllUsersQuery({})
 
@@ -30,5 +31,13 @@ export default function TenantsPage() {
         <p className='text-2xl dark:text-lime-500'>No tenants found.</p>
       )}
     </div>
+  )
+}
+
+export default function TenantsPage(){
+  return (
+    <ProtectedRoute>
+      <TenantsPageContent/>
+    </ProtectedRoute>
   )
 }
