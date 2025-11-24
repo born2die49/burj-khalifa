@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import ThemeSwitcher from './ThemeSwitcher'
 import MobileNavbar from './MobileNavbar'
+import AuthAvatar from '@/components/shared/navbar/AuthAvatar'
 
 export default function Navbar() {
   return (
@@ -17,6 +18,8 @@ export default function Navbar() {
       <div className='flex items-center gap-4 sm:gap-6 lg:gap-8'>
         {/* placeholder theme switcher component */}
         <ThemeSwitcher/>
+        { /* Navbar avatar component */}
+        <AuthAvatar />
         {/* placeholder mobile navigation */}
         <MobileNavbar/>
       </div>
