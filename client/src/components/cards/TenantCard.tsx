@@ -11,7 +11,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
 import TenantInfo from "./TenantInfo";
 import {
 	BrickWall,
@@ -24,10 +23,12 @@ import {
 import { formatDate } from "@/utils";
 import ProtectedRoute from "@/components/shared/ProtectedRoutes";
 import { Avatar, AvatarImage } from "../ui/avatar";
+import { useAppSelector } from "@/lib/redux/hooks/typedHooks";
 
 function TenantCardContent() {
 	const { theme } = useTheme();
-	const { data, isLoading } = useGetAllUsersQuery({});
+	const searchTerm = useAppSelector((state) => state.user.searchTerm);
+	const { data, isLoading } = useGetAllUsersQuery({ searchTerm });
 
 	if (isLoading) {
 		return (
@@ -52,16 +53,16 @@ function TenantCardContent() {
 								<CardHeader className="flex-col-center text-center">
 									<Avatar className="border-pumpkin mx-auto size-32 overflow-hidden rounded-full border-4 object-cover">
 										<AvatarImage
-										alt="User profile avatar"
-										src={
-											tenant.avatar ||
-											(theme === "dark"
-												? "/assets/icons/user-profile-circle.svg"
-												: "/assets/icons/user-profile-light-circle.svg")
-										}
-										width={100}
-										height={100}
-									/>
+											alt="User profile avatar"
+											src={
+												tenant.avatar ||
+												(theme === "dark"
+													? "/assets/icons/user-profile-circle.svg"
+													: "/assets/icons/user-profile-light-circle.svg")
+											}
+											width={100}
+											height={100}
+										/>
 									</Avatar>
 									<CardTitle className="h3-semibold font-robotoSlab dark:text-platinum">
 										{tenant.full_name}
