@@ -12,3 +12,6 @@ export type { TRegisterUserSchema } from "./RegisterSchema";
 
 export { profileSchema } from "./ProfileSchema"
 export type { TProfileSchema } from "./ProfileSchema"
+
+export { apartmentCreateSchema } from "./ApartmentCreateSchema"
+export type { TApartmentCreateSchema } from "./ApartmentCreateSchema"
