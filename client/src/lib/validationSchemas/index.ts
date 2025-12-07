@@ -10,8 +10,14 @@ export type { TPasswordResetRequestSchema } from "./PasswordResetRequestSchema";
 export { registerUserSchema } from "./RegisterSchema";
 export type { TRegisterUserSchema } from "./RegisterSchema";
 
-export { profileSchema } from "./ProfileSchema"
-export type { TProfileSchema } from "./ProfileSchema"
+export { profileSchema } from "./ProfileSchema";
+export type { TProfileSchema } from "./ProfileSchema";
 
-export { apartmentCreateSchema } from "./ApartmentCreateSchema"
-export type { TApartmentCreateSchema } from "./ApartmentCreateSchema"
+export type { TApartmentCreateSchema } from "./ApartmentCreateSchema";
+export { apartmentCreateSchema } from "./ApartmentCreateSchema";
+
+export type { TIssueUpdateSchema } from "./IssueUpdateSchema";
+export { issueUpdateSchema } from "./IssueUpdateSchema";
+
+export type { TIssueCreateSchema } from "./IssueCreateSchema";
+export { issueCreateSchema } from "./IssueCreateSchema";
