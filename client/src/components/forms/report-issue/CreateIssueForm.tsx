@@ -107,7 +107,6 @@ export default function CreateIssueForm() {
 									<Select
 										className="mt-1 w-full"
 										options={statusOptions}
-										defaultValue={statusOptions[0]}
 										value={statusOptions.find(
 											(option) => option.value === value,
 										)}
