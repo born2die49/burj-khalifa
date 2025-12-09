@@ -10,6 +10,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Issues from "@/components/profile/Issues";
 import AssignedIssues from "@/components/profile/AssignedIssues";
+import Reports from "@/components/profile/reports";
 
 export const metadata: Metadata = {
 	title: "Burj Khalifa | User Profile",
@@ -60,6 +61,7 @@ function ProfilePageContent() {
 						<Issues />
 
 						{/* report tab content */}
+						<Reports />
 
 						{/* assigned issue tab content */}
 						<AssignedIssues />
