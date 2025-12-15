@@ -17,6 +17,7 @@ import ProtectedRoute from "../shared/ProtectedRoutes";
 import { getRepliesText, sortByDateDescending } from "@/utils";
 import { MessageCircleMoreIcon } from "lucide-react";
 import RepliesList from "./RepliesList";
+import CreateReplyForm from "../forms/add-reply/CreateReplyForm";
 
 interface PostDetailsProps {
 	params: {
@@ -99,6 +100,13 @@ function PostDetailsContent({ params }: PostDetailsProps) {
 					<p className="text-lg">This Post does&apos;t have any replies yet</p>
 				)}
 			</div>
+			
+			<Card className="border-b-eerieBlack dark:border-gray dark:text-platinum border-b border-dashed">
+				<h2 className="h2-semibold dark:text-pumpkin mt-3">
+					Add a reply
+				</h2>
+				<CreateReplyForm slug={post?.slug}/>
+			</Card>
 		</Card>
 	);
 }
