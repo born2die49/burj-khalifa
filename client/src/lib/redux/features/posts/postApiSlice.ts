@@ -52,7 +52,7 @@ export const postApiSlice = baseApiSlice.injectEndpoints({
 		updatePost: builder.mutation<PostResponse, UpdatePostData>({
 			query: ({ postSlug, ...postData }) => ({
 				url: `/posts/${postSlug}/update/`,
-				method: "POST",
+				method: "PATCH",
 				body: postData,
 			}),
 			invalidatesTags: ["Post"],
@@ -91,7 +91,7 @@ export const postApiSlice = baseApiSlice.injectEndpoints({
 		}),
 
 		getAllMyBookmarks: builder.query<BookmarkedPostsResponse, void>({
-			query: () => "/posts/bookmarked/posts",
+			query: () => "/posts/bookmarked/posts/",
 			providesTags: ["Post"],
 		}),
 
@@ -110,15 +110,15 @@ export const postApiSlice = baseApiSlice.injectEndpoints({
 			providesTags: ["Post"],
 		}),
 
-		getPostByTag: builder.query<PostsByTagResponse, string>({
-			query: (tagSlug) => `/posts/tags/${tagSlug}`,
+		getPostsByTag: builder.query<PostsByTagResponse, string>({
+			query: (tagSlug) => `/posts/tags/${tagSlug}/`,
 			providesTags: ["Post"],
 		}),
 
 		replyToPost: builder.mutation<ReplyResponse, ReplyPostData>({
 			query: ({ postId, ...replyData }) => ({
 				url: `/posts/${postId}/reply/`,
-				method: "PATCH",
+				method: "POST",
 				body: replyData,
 			}),
 			invalidatesTags: ["Post"],
@@ -130,7 +130,7 @@ export const {
 	useCreatePostMutation,
 	useGetAllPostsQuery,
 	useGetAllMyBookmarksQuery,
-	useGetPostByTagQuery,
+	useGetPostsByTagQuery,
 	useGetMyPostsQuery,
 	useGetTopPostsQuery,
 	useGetPopularTagsQuery,
