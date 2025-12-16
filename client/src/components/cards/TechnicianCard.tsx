@@ -31,11 +31,11 @@ export default function TechnicianCard() {
 	const totalPages = Math.ceil(totalCount / 9);
 
 	if (isLoading) {
-    return (
-      <div className="flex-center pt-32">
-        <Spinner size="xl" />
-      </div>
-    );
+		return (
+			<div className="flex-center pt-32">
+				<Spinner size="xl" />
+			</div>
+		);
 	}
 	return (
 		<div>
@@ -49,7 +49,7 @@ export default function TechnicianCard() {
 					technicians.results.map((technician) => (
 						<Card key={technician.id}>
 							<CardContent className="dark:border-gray rounded-lg cursor-pointer border">
-								<CardHeader className="flex w-full">
+								<CardHeader className="flex-center w-full">
 									<Avatar>
 										<AvatarImage
 											className="rounded-full"
@@ -86,10 +86,11 @@ export default function TechnicianCard() {
 								</CardDescription>
 
 								<div className="flex-center">
-									<Link href={`/add-rating?username=${technician.username}`} />
-									<Button size="sm" className="electricIndigo-gradient mt-3">
-										Give me a Rating
-									</Button>
+									<Link href={`/add-rating?username=${technician.username}`}>
+										<Button size="sm" className="electricIndigo-gradient mt-3">
+											Give me a Rating
+										</Button>
+									</Link>
 								</div>
 							</CardContent>
 						</Card>

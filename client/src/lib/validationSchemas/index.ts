@@ -36,3 +36,6 @@ export { postUpdateSchema } from "./PostUpdateschema";
 
 export type { TReplyCreateSchema } from "./ReplyCreateSchema";
 export { replyCreateSchema } from "./ReplyCreateSchema";
+
+export type { TRatingCreateSchema } from "./RatingCreateSchema";
+export { ratingCreateSchema } from "./RatingCreateSchema";
