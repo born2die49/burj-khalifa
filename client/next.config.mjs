@@ -7,6 +7,8 @@ const nextConfig = {
       }
     ]
   },
+
+  output: "standalone",
   
   webpack: (config, { isServer }) => {
     if (!isServer) {
