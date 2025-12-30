@@ -6,7 +6,7 @@ FROM base as deps
 
 RUN apk add --no-cache libc6-compat
 
-ARG APP_HOME = /app
+ARG APP_HOME=/app
 WORKDIR ${APP_HOME}
 
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./

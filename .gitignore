@@ -1,6 +1,5 @@
 _env/
 .envs/*
-!.envs./.env.production
 !.envs/.env.example
 
 staticfiles/
