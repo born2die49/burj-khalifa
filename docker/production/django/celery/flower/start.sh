@@ -8,14 +8,14 @@ worker_ready() {
 }
 
 until worker_ready; do
-  >&2 echo 'Celery workers not available'
+  echo >&2 'Celery workers not available'
   sleep 1
 done
 
->&2 echo 'Celery workers are available'
+echo >&2 'Celery workers are available'
 
 exec celery \
   -A config.celery_app \
   -b "${CELERY_BROKER_URL}" \
   flower \
-  --basic_auth="${CELERY_FLOWER_USER}:${CELERY_FLOWER_PASSWORD}
+  --basic_auth="${CELERY_FLOWER_USER}:${CELERY_FLOWER_PASSWORD}"

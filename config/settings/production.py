@@ -8,7 +8,7 @@ from .base import BASE_DIR
 
 prod_env_file = path.join(BASE_DIR, ".envs", ".env.production")
 
-if path(prod_env_file):
+if path.isfile(prod_env_file):
   load_dotenv(prod_env_file)
 
 SECRET_KEY = getenv("DJANGO_SECRET_KEY",)
@@ -41,9 +41,9 @@ SECURE_HSTS_SECONDS = 300
 
 SECURE_HSTS_INCLUDE_SUBDOMAINS = getenv("DJANGO_SECURE_HSTSINCLUDE_SUBDOMAINS", "True") == "True"
 
-SECURE_HSTS_PRELOAD = getenv("DJANGO_SECURE_HSTS_PRELOAD", "Ture") = "True"
+SECURE_HSTS_PRELOAD = getenv("DJANGO_SECURE_HSTS_PRELOAD", "Ture") == "True"
 
-SECURE_CONTENT_TYPE_NOSNIFF = getenv("SECURE_CONTENT_TYPE_NOSNIFF", "True") = "True"
+SECURE_CONTENT_TYPE_NOSNIFF = getenv("SECURE_CONTENT_TYPE_NOSNIFF", "True") == "True"
 
 CSRF_TRUSTED_ORIGINS = ["https://urbansoftwarelab.com", "https://www.urbansoftwarelab.com"]
 

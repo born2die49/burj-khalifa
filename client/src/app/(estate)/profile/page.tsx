@@ -10,7 +10,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Issues from "@/components/profile/Issues";
 import AssignedIssues from "@/components/profile/AssignedIssues";
-import Reports from "@/components/profile/reports";
+import Reports from "@/components/profile/Reports";
 
 export const metadata: Metadata = {
 	title: "Burj Khalifa | User Profile",

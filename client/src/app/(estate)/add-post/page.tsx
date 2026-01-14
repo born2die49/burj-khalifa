@@ -2,7 +2,7 @@ import CreatePostForm from "@/components/forms/add-post/CreatePostForm"
 import { AuthFormHeader } from "@/components/forms/auth"
 import type {Metadata} from "next"
 
-export const matadata: Metadata = {
+export const metadata: Metadata = {
   title: "Burj Khalifa | Add a post",
   description: "Authenticated users can ask any question or post some content for all users to see"
 }
